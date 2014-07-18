@@ -1,0 +1,32 @@
+<html>
+<head></head>
+<body>
+
+Have you had surgery?<br>
+<form>
+  <input type="radio" name="surgery" value="No" onClick="toggle(this)" >No<br>
+  <input type="radio" name="surgery" value="Yes" onClick="toggle(this)" >Yes &nbsp; &rarr; &nbsp;
+    <div id="question1" style="display: none;">
+      <label for="date">Date:</label>
+      <input type="text" name="date" id="date"> &nbsp;
+      <label for="reason">Reason:</label>
+      <input type="text" name="reason" id="reason">
+    </div>
+</form> 
+ 
+ 
+<script>
+	var questionHide = document.getElementById('question1');
+  function toggle(switchElement) {
+        if (switchElement.value == 'Yes') 
+		questionHide.style.display = 'inline';
+
+        else
+		questionHide.style.display = 'none';
+
+  }
+</script>
+ 
+ 
+</body>
+</html>
